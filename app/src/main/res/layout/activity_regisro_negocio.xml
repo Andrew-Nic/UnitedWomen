@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisroNegocio">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/ToolbarRegistroMinegociot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:liftOnScroll="true"
+        android:theme="@style/Theme.BraveWoman"
+        android:background="@color/white">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_RegisNegocio"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:titleTextColor="@color/PRINCIPAL" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbarAlwaysDrawVerticalTrack="false"
+        android:layout_below="@+id/ToolbarRegistroMinegociot">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Registrar Negocio"
+                android:fontFamily="@font/roboto_black"
+                android:textSize="25sp"
+                android:textColor="@color/texto" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/instRegisNegocio"
+                android:fontFamily="@font/roboto_black"
+                android:textSize="18sp"
+                android:textColor="@color/texto"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_black"
+                android:text="Nombre de su Negocio"
+                android:layout_marginTop="8dp"/>
+            <EditText
+                android:layout_marginTop="8dp"
+                android:id="@+id/inputNombreNegocio"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Nombre de su Negocio"
+                android:background="@drawable/custom_editext_registros"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:maxLines="1"/>
+            <TextView
+                android:layout_marginTop="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_black"
+                android:text="Descripcion de mi negocio" />
+
+            <EditText
+                android:layout_marginTop="8dp"
+                android:id="@+id/imputDescripMiNegocio"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Ingrese una descripcion de su Negocio"
+                android:background="@drawable/custom_editext_registros"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:inputType="textMultiLine"/>
+            <TextView
+                android:layout_marginTop="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_black"
+                android:text="Correo de contacto a su negocio"/>
+
+            <EditText
+                android:layout_marginTop="8dp"
+                android:id="@+id/imputCorreoContacto"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Correo de contacto"
+                android:background="@drawable/custom_editext_registros"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:maxLines="1"/>
+
+            <TextView
+                android:layout_marginTop="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seleccione un foto de perfil para su negocio.(Opcional)"
+                android:textColor="@color/texto"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_marginTop="8dp"
+                android:id="@+id/IV_PerfilNegocio"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_add_photo"
+                app:civ_border_width="1dp"
+                app:civ_border_color="@color/RosaPalido"/>
+
+            <TextView
+                android:layout_marginTop="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seleccione un baner para su negocio.(Opcional)"
+                android:textColor="@color/texto"/>
+
+            <ImageView
+                android:layout_marginTop="8dp"
+                android:id="@+id/IV_BannerNegocio"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_add_photo" />
+
+            <Button
+                android:layout_marginTop="8dp"
+                android:id="@+id/BtnCrearNegocio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Crear"
+                android:backgroundTint="@color/verde"
+                android:layout_marginBottom="20dp"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

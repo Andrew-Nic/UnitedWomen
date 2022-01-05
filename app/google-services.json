@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "684745933399",
+    "project_id": "brave-woman",
+    "storage_bucket": "brave-woman.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:684745933399:android:1643778d1b1e163fb59912",
+        "android_client_info": {
+          "package_name": "com.example.bravewoman"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "684745933399-p9ce2v4mjuufta5kuo4pf35fe0tf8p4l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bravewoman",
+            "certificate_hash": "0d9178ae046112deace505171494ae03d430eb13"
+          }
+        },
+        {
+          "client_id": "684745933399-a018hbkefbc5c3b0dbj43lb0shvd59sd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiQpNO4UsaM1J9o8a7pLK5boFta3VIPhI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "684745933399-a018hbkefbc5c3b0dbj43lb0shvd59sd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

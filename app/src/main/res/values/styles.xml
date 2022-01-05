@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="navigationTheme">
+        <!--color de texto cuando se selecciona un item-->
+        <item name="colorPrimary">#000000</item>
+        <!--color de background cuando se selecciona un item-->
+        <item name="colorControlHighlight">@color/RosaPalido</item>
+    </style>
+</resources>

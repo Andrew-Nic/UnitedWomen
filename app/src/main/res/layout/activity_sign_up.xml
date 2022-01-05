@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUp"
+    android:orientation="vertical"
+    android:background="#fff"
+    android:padding="20dp">
+    <!--Bienvenida-->
+    <TextView
+        android:id="@+id/bienvenida_SignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bienvenida_SignUp"
+        android:textSize="40sp"
+        android:fontFamily="@font/roboto_black"
+        android:textColor="@color/texto"/>
+    <!--instrucciones-->
+    <TextView
+        android:id="@+id/instrucciones_SignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/instruciones_SignUp"
+        android:textSize="18sp"
+        android:fontFamily="@font/roboto_black"
+        android:textColor="@color/texto"/>
+    <!--info del usuario-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/infoUsuario_SignUp"
+        android:orientation="vertical">
+        <!--correo electronico Editext-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/correo_SignUp"
+            android:hint="@string/ing_correo"
+            app:boxBackgroundColor="@color/RosaPalidoET">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:fontFamily="@font/roboto_black"
+                android:textColor="@color/texto"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--contraseña edtitext-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/contraseña_SignUp"
+            android:hint="@string/ing_password"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/PRINCIPAL"
+            app:boxBackgroundColor="@color/RosaPalidoET"
+            app:counterEnabled="true"
+            app:helperText="Mínimo 6 caracteres"
+            app:helperTextTextColor="@color/texto"
+            app:counterTextColor="@color/texto">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:fontFamily="@font/roboto_black"
+                android:textColor="@color/texto"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--boton iniciar-->
+        <Button
+            android:id="@+id/btnRegistarse_SignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnRegistrarse"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/roboto_black"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/verde"/>
+        <!--boton nuevo usuario-->
+        <Button
+            android:id="@+id/btntengoCuenta_SignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:text="@string/btnTengoCuenta"
+            android:layout_gravity="start"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/roboto_black"
+            android:textColor="@color/texto"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"/>
+    </LinearLayout>
+
+</LinearLayout>

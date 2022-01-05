@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">United Women</string>
+    <!--ctrl + /-->
+    <!--    Uso general-->
+    <string name="ing_correo">Correo Electronico</string>
+    <string name="ing_password">Contraseña</string>
+
+    <!--    activity_login-->
+    <string name="saludo_LogIn">¡Hola! Es un gusto tenerte de regreso</string>
+    <string name="instruciones_LogIn">Completa los campos para iniciar sesion</string>
+    <string name="btnRecuperPassword">¿Olvido su contraseña?</string>
+    <string name="btnIniciar">Iniciar</string>
+    <string name="btnNoTengoCuenta">¿No tienes una cuenta? Registrate Aquí</string>
+
+    <!--    activity_sing_up-->
+    <string name="bienvenida_SignUp">Registro de usuario</string>
+    <string name="instruciones_SignUp">Completa los siguientes campos para poder registrar una cuenta nueva</string>
+    <string name="btnRegistrarse">Aceptar</string>
+    <string name="btnTengoCuenta">¿Ya tienes una cuenta? Ingresar Aquí</string>
+
+    <!--    activity_main-->
+    <string name="descbtnmenu">Boton para el menu lateral</string>
+    <string name="desxbtnCarritoCompras">Btoton para acceder al carrito de compras</string>
+    <string name="buscar">Buscar</string>
+    <string name="descbtnBuscar">Boton para iniciar la busqueda de lo que se tenga en el textview de alado</string>
+    <string name="vertodoBtn">Ver Todo</string>
+    <string name="desTalleres">Imagen para presentar los talleres</string>
+    <string name="IntroTalleres">En esta seccion tenemos los talleres mas recientes de todo tipo de tema que le pueda interesar</string>
+    <string name="IntroAsoIns">El instituto de las mujeres de tekax fue creado el 24 enero de 2019, siento el primero en tekax con el objetivo de prevenir, atender y erradicar la violencia en contra de las mujeres de trkax u sus comisarías, así como la promoción de sus derechos, el desarrollo y empoderamiento de las mujeres, así como crear y promover políticas publicas con  perspectiva de Genero</string>
+    <string name="objetivo">Crear y promocionar  políticas públicas municipales encaminadas a la realización  de reglamentos enfocados  a prevenir, atender y erradicar la violencia  en contra  de las mujeres de nuestro municipio de una manera permanente e institucionalizada. </string>
+
+    <!--    activity_verificacion_de_cuenta-->
+    <string name="alertVerificacion">Cuenta no verificada</string>
+    <string name="mensajeVerificacion">Para verificar la cuenta de correo electronico que proporcionaste, te enviaremos un correo para poder verificar que la cuenta te pertenezca</string>
+    <string name="preguntaEnviarCorreo">¿Enviar correo ahora?</string>
+    <string name="btnEnviarcorreo">Enviar</string>
+    <string name="masInfo">Para mas informacion:</string>
+    <string name="btnTerCon">Terminos y condiciones</string>
+    <string name="btnPoliticas">Politicas de privacidad</string>
+    <string name="avisoActualizarinfo">Si tu verificaste tu cuenta en tu correo presiona el boton Actualizar</string>
+    <string name="btnActualizar">Actualizar</string>
+    <string name="btnContinuar">Continuar</string>
+
+    <!--    list_publicaciones-->
+    <string name="desImage">Image principal de la publicacion</string>
+    <string name="NomProducto">Nombre del producto</string>
+    <string name="NomTienda">Nombre de la tienda que lo ofrece</string>
+    <string name="precio">$ Precio</string>
+
+    <!--    menu_header-->
+    <string name="esloganApp">Eslogan de la app</string>
+
+    <!--Main menu res/menu/main_menu.xml-->
+    <string name="homeTitulo">Home</string>
+    <string name="perfilTitulo">Perfil</string>
+    <string name="perfil1.1">Mi Perfil</string>
+    <string name="perfil1.2">Mi Negocio</string>
+    <string name="servBWTitulo">Contenido de Brave Woman</string>
+    <string name="servProductos">Productos</string>
+    <string name="servTalleres">Talleres</string>
+    <string name="servAsoIns">Asociaciones e Instituciones</string>
+    <string name="ajustesTitle">Ajustes</string>
+    <string name="configuraciones">Configuraciones</string>
+    <string name="AboutUs">Acerca de</string>
+    <string name="logout">Cerrar Sesion</string>
+
+    <!--    activity_mi_negocio-->
+    <string name="crearNegocio">Crear Mi negocio</string>
+    <string name="msjCrearNegocio">!Aun no has agregado un negocio!, ¿deseas agregarlo en este momento?</string>
+    <string name="bsnombreNegocio">Nombre del Negocio</string>
+    <string name="bsdescripcion">Description</string>
+
+    <!--    activity_registro_negocio-->
+    <string name="instRegisNegocio">Complete los siguientes campos para poder registrar los datos de su negocio</string>
+</resources>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="@string/perfilTitulo">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/mi_perfil"
+                    android:title="@string/perfil1.1"/>
+                <item
+                    android:id="@+id/mi_negocio"
+                    android:title="@string/perfil1.2"/>
+            </group>
+        </menu>
+    </item>
+    <item android:title="@string/servBWTitulo">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/productos"
+                    android:title="@string/servProductos"/>
+                <item
+                    android:id="@+id/Talleres"
+                    android:title="@string/servTalleres"/>
+                <item
+                    android:id="@+id/Aso_Ins"
+                    android:title="@string/servAsoIns"/>
+            </group>
+        </menu>
+    </item>
+    <item android:title="@string/ajustesTitle">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/configuracion"
+                    android:title="@string/configuraciones"/>
+                <item
+                    android:id="@+id/AcercaDe"
+                    android:title="@string/AboutUs"/>
+                <item
+                    android:id="@+id/logOut"
+                    android:title="@string/logout"/>
+            </group>
+        </menu>
+    </item>
+</menu>

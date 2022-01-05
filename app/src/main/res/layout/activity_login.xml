@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login"
+    android:padding="20dp">
+
+<!--    saludo-->
+    <TextView
+        android:layout_marginTop="60dp"
+        android:id="@+id/saludo_LogIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/saludo_LogIn"
+        android:textSize="40sp"
+        android:fontFamily="@font/roboto_black"
+        android:textColor="@color/texto" />
+    <!--instrucciones-->
+    <TextView
+        android:id="@+id/instrucciones_LogIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/saludo_LogIn"
+        android:text="@string/instruciones_LogIn"
+        android:textSize="18sp"
+        android:fontFamily="@font/roboto_black"
+        android:textColor="@color/texto"/>
+    <!--info del usuario y opciones-->
+        <!--correo electronico Editext-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/correo_LogIn"
+            android:layout_below="@+id/instrucciones_LogIn"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            app:boxBackgroundColor="@color/RosaPalidoET">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:hint="@string/ing_correo"
+                android:fontFamily="@font/roboto_black"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--contraseña edtitext-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/correo_LogIn"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/contraseña_LogIn"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/PRINCIPAL"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            app:boxBackgroundColor="@color/RosaPalidoET">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="@string/ing_password"
+                android:fontFamily="@font/roboto_black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--boton recuperar contrasena-->
+        <Button
+            android:layout_below="@+id/contraseña_LogIn"
+            android:id="@+id/btnRecuperarContraseña_LogIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:text="@string/btnRecuperPassword"
+            android:layout_alignParentEnd="true"
+            android:textColor="#000"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/roboto_black"/>
+        <!--boton iniciar-->
+        <Button
+            android:layout_below="@+id/btnRecuperarContraseña_LogIn"
+            android:id="@+id/btnIniciar_LogIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/btnIniciar"
+            android:backgroundTint="@color/verde"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/roboto_black"/>
+        <!--boton nuevo usuario-->
+        <Button
+            android:layout_below="@+id/btnIniciar_LogIn"
+            android:id="@+id/btnNuevoUsuario_LogIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:text="@string/btnNoTengoCuenta"
+            android:layout_gravity="start"
+            android:elevation="0dp"
+            android:textColor="#000"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/roboto_black"/>
+</RelativeLayout>
