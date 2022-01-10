@@ -171,10 +171,10 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:layout_marginEnd="10dp"
-                        android:text="@string/vertodoBtn"
                         android:fontFamily="@font/roboto_black"
-                        android:textSize="20sp"
-                        android:textColor="@color/verde"/>
+                        android:text="@string/vertodoBtn"
+                        android:textColor="@color/verde"
+                        android:textSize="20sp" />
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"

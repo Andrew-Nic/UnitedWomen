@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private FirebaseFirestore mFirestore;
     private ProductosAdapter adapter;
     private CardView mCarTal, mCarAso;
+    TextView todoTalleres;
 
     //drawer menu
     DrawerLayout drawerLayout;
@@ -51,6 +53,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         mCarTal = findViewById(R.id.cardTalleres);
         mCarAso=findViewById(R.id.CardAsoIns);
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_Navigation);
+        todoTalleres=findViewById(R.id.vertodoTalleres);
         //menu hooks
         drawerLayout=findViewById(R.id.drawer_layout);
         navigationView=findViewById(R.id.nav_view);
@@ -89,6 +92,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         mCarAso.setOnClickListener(v ->
                 startActivity(new Intent(MainActivity.this,descriptionInstitucion.class)));
+
+        todoTalleres.setOnClickListener(v ->
+                startActivity(new Intent(MainActivity.this, Talleres.class)));
     }
     private void anuncio(){
         Toast.makeText(MainActivity.this, "Proximante...", Toast.LENGTH_SHORT).show();

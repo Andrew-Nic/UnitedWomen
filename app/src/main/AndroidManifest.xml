@@ -13,6 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BraveWoman">
         <activity
+            android:name=".Talleres"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
+        <activity
             android:name=".AboutUs"
             android:exported="false"
             android:parentActivityName=".MainActivity" />
