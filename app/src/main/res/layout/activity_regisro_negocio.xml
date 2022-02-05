@@ -85,18 +85,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_black"
-                android:text="Correo de contacto a su negocio"/>
+                android:text="Numero de contacto a su negocio"/>
 
             <EditText
                 android:layout_marginTop="8dp"
-                android:id="@+id/imputCorreoContacto"
+                android:id="@+id/imputNumeroContacto"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:hint="Correo de contacto"
+                android:hint="Numero de contacto"
+                android:inputType="phone"
                 android:background="@drawable/custom_editext_registros"
                 android:paddingStart="8dp"
                 android:paddingEnd="8dp"
-                android:maxLines="1"/>
+                android:maxLines="1" />
 
             <TextView
                 android:layout_marginTop="8dp"
