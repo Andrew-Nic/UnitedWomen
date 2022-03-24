@@ -169,7 +169,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
 
-    //reycler view para mostar los productos en la pantalla
+    //reycler view para mostrar los productos en la pantalla
     private void configurarRecliclerViewProductos() {
         Query query = mFirestore.collection("publicaciones_productos");
 
@@ -213,4 +213,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onStop();
         adapter.stopListening();
     }
+
+
 }
