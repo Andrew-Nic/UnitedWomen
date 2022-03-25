@@ -6,7 +6,6 @@ import androidx.appcompat.widget.Toolbar;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -21,7 +20,6 @@ public class DetallesProducto extends AppCompatActivity {
     FirebaseFirestore mfirestone;
     TextView mNomProd,mDescription,mPrecio,mPrecioInferior;
     ImageView mIVproducto;
-    Button mBcomprar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +35,6 @@ public class DetallesProducto extends AppCompatActivity {
         mPrecio=findViewById(R.id.precio);
         mPrecioInferior=findViewById(R.id.PreProducto);
         mIVproducto=findViewById(R.id.IVProducto);
-        mBcomprar=findViewById(R.id.ButtonComprar);
 
 
         String pathReferencenceFirestone = getIntent().getStringExtra("pathReferenceProducto");
