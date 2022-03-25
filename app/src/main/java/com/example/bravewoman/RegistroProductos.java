@@ -39,6 +39,19 @@ import com.theartofdev.edmodo.cropper.CropImageView;
 import java.util.HashMap;
 import java.util.Map;
 
+/*para publicar un producto:
+* 1. Se rellenan los datos requeridos en el activity
+* 2. al precionar el Boton de Publicar se ejecuta el metodo publicarProducto()
+*    Primero sube la imagen al Storage de Firebase.
+*       si la imagen se sube, se le pasa la referencia de donde se guardo la imagen al metodo SaveToFirestore() y nombre del procucto, posteriormente se ejecuta este mismo
+*       si no se pudo subir se muestra un toast que indica que no se pudo subir
+* 3. Al ejecutar SaveToFirestore()
+*    primero consulta el url de la imagen del producto en base a la referencia del storage que se le paso al metodo
+*    Segunda cosa por hacer es crean un HashMap que contendra los la informacion del producto; el hash map se llama miNegocio; esta mal nombrado, deberia ser producto pero por
+*       cuestiones de tiempo no le he cambiado el nombre
+*    Tercera cosa por hacer para simplificar las cosas para poner la informacion al hashMap, es poner la informacion del activity en las variables correspondientes
+*    Cuarta cosa es poner las variables al hashmap con la funcion .put
+*    Quinta cosa por subir la informacion del hasmap a firestore, si se sube se regresa al activity de mi negocio y si no se muestra un toast */
 public class RegistroProductos extends AppCompatActivity {
 
     private ImageView mIVfotoProducto;
@@ -95,6 +108,7 @@ public class RegistroProductos extends AppCompatActivity {
             }
         });
 
+        //solo consulta el nombre de la tienda y se lo pone al activity
         mFirestone.collection("Negocios").document(mUserID+"").get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             private String nombreTienda;
             @Override
@@ -110,10 +124,11 @@ public class RegistroProductos extends AppCompatActivity {
             }
         });
 
+        // boton para publicar el producto
         mPublicar.setOnClickListener(v -> publicarProducto());
     }
 
-
+// recorta la imagen para ser subida
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
@@ -142,17 +157,16 @@ public class RegistroProductos extends AppCompatActivity {
 
         StorageReference filepath = mStorageReference.child("FotoProductosXnegocio").child(mUserID).child(nombreProducto);
         StorageReference FotoProducto = filepath.child(nombreProducto+".jpg");
-        FotoProducto.putFile(mImageUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
-                if (task.isSuccessful()){
-                    saveToFirestone(FotoProducto, nombreProducto);
-                }else{
-                    Toast.makeText(RegistroProductos.this, "NO SE SUBIO A FIRESTORE", Toast.LENGTH_SHORT).show();
-                }
+        FotoProducto.putFile(mImageUri).addOnCompleteListener(task -> {
+            if (task.isSuccessful()){
+                //FotoProducto es una referencia de la imagen subuda al storage, es decir, donde se encuentra ubicada la imagen
+                saveToFirestone(FotoProducto, nombreProducto);
+            }else{
+                Toast.makeText(RegistroProductos.this, "NO SE SUBIO A FIRESTORE", Toast.LENGTH_SHORT).show();
             }
         });
     }
+
 
     private void saveToFirestone(StorageReference fotoProducto, String nombreProducto) {
         fotoProducto.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
@@ -164,11 +178,13 @@ public class RegistroProductos extends AppCompatActivity {
                 String descripcionProducto = mDescripcionProducto.getText().toString();
                 String precioProducto = mPrecioProducto.getText().toString();
                 String nomTienda = mNombreTienda.getText().toString();
+                String idTienda = mUserID+"";
                 miNegocio.put("nombreProducto", nombreProducto);
                 miNegocio.put("descripcionProducto", descripcionProducto);
                 miNegocio.put("precioProducto", precioProducto);
                 miNegocio.put("nombreTienda", nomTienda);
                 miNegocio.put("fotoProducto",descargaUriFoto.toString());
+                miNegocio.put("idNegocio",idTienda);
 
 
 

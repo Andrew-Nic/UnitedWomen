@@ -44,7 +44,7 @@ public class RegisroNegocio extends AppCompatActivity {
     private Toolbar mToolDetallesproducto;
     private CircleImageView mCIVperfilNegocio;
     private ImageView mIVBanner;
-    private EditText mNomMiNegocio, mDesMiNegocio;
+    private EditText mNomMiNegocio, mDesMiNegocio, mNumContacto;
     private Button mBtnCrearNegocio;
 
     private FirebaseFirestore mFirestone;
@@ -123,6 +123,7 @@ public class RegisroNegocio extends AppCompatActivity {
         mBtnCrearNegocio = findViewById(R.id.BtnCrearNegocio);
         mIVBanner = findViewById(R.id.IV_BannerNegocio);
         mCIVperfilNegocio = findViewById(R.id.IV_PerfilNegocio);
+        mNumContacto = findViewById(R.id.imputNumeroContacto);
 
         mStorageReference = FirebaseStorage.getInstance().getReference();
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
@@ -173,12 +174,14 @@ public class RegisroNegocio extends AppCompatActivity {
 
                         String NombreMiNegocio = mNomMiNegocio.getText().toString();
                         String DescripcionMinegocio = mDesMiNegocio.getText().toString();
+                        String NumeroContacto = mNumContacto.getText().toString();
 
                         Map<String,Object> miNegocio= new HashMap<>();
                         miNegocio.put("nombreNegocio", NombreMiNegocio);
                         miNegocio.put("descNegocio", DescripcionMinegocio);
                         miNegocio.put("fotoPerfil",DesgargaUriFotoPerfil.toString());
                         miNegocio.put("fotoBaner",DesgargaUriFotoBaner.toString());
+                        miNegocio.put("NumContacto", NumeroContacto);
 
                         mFirestone.collection("Negocios").document(mUserID+"").set(miNegocio).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
